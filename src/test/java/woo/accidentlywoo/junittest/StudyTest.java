@@ -15,10 +15,9 @@ class StudyTest {
 //    @DisplayName("스터디 만들기 ╯°□°）╯")
     public void create_new_study() throws Exception{
         //given
-        Study study = new Study(10);
+        Study actual = new Study(10);
         //when
-        assertNotNull(study);
         //then
-        System.out.println("create");
+        assertThat(actual.getLimit()).isGreaterThan(0);
     }
 }
