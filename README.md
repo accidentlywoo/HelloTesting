@@ -7,7 +7,8 @@
 ---
 
 ## 1. JUnit 5
-[JUnit5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
+[JUnit5 User Guide 정리](./docs-short-cut.md)
+
 대체제 : TestNG, Spock, ..
 
 - JUnit 5는 Platform 기반 테스트 런처 제공 
