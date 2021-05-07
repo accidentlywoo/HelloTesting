@@ -255,7 +255,44 @@ class Test {
 }
 ```
 
+
+
 ---
+
+### 8. Tagging and Filtering
+
+테스트 클래스와 메소드는 @Tag 어노테이션으로 태그될 수 있다.
+
+이 태그는 테스트 디스커버리와 실행에서 필터링될 수 있다.
+
+1. Syntax Rules for Tags
+
+- 태그는 null과 공백이 될 수 없다.
+- 트림(trim)된 태그는 공백을 포함하면 안된다.
+- 트림(trim)된 태그는 ISO 컨트롤 문자는 포함될 수 없다.
+- 트림(trim)된 태그는 아래 문자를 포함하면 안된다.
+    - , 
+    - (
+    - )
+    - &
+    - |
+    - !
+    
+```java
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+
+@Tag("fast")
+@Tag("model")
+class TaggingDemo {
+
+    @Test
+    @Tag("taxes")
+    void testingTaxCalculation() {
+    }
+
+}
+```
 
 ## 영어단어 갱킹
 - prominent : 현저한
